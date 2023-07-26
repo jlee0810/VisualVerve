@@ -37,11 +37,31 @@ struct Sphere
             closestDist = t0;
             return true;
         }
-        return true;
+        return false;
     }
 };
 
-Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene)
+struct Light
+{
+    // Point Light Source
+    Light(const Vec3f &p, const float &i) : position(p), intensity(i) {}
+    Vec3f position;
+    float intensity;
+};
+
+float calcLighting(const std::vector<Light> &lights, const Vec3f &point, const Vec3f &normal)
+{
+    float diffuseIntensity = 0;
+    for (const Light &l : lights)
+    {
+        Vec3f lightDir = (l.position - point).normalize();                  // Vector from light source to point
+        diffuseIntensity += l.intensity * std::max(0.f, lightDir * normal); // Diffuse intensity is the dot product of the light direction and the normal
+        // The intensity is 0 when the angle between the light direction and the normal is greater than 90 degrees ie backface
+    }
+    return diffuseIntensity; // Since the light doesn't have a color yet we just return the intensity
+}
+
+Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene, const std::vector<Light> &lights = {})
 {
     float sphere_dist = std::numeric_limits<float>::max();
     Vec3f fillColor{};
@@ -51,7 +71,9 @@ Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &s
     {
         if (s.ray_intersect(orig, dir, sphere_dist))
         {
-            fillColor = s.color;
+            Vec3f point = orig + dir * sphere_dist;
+            float diffuseIntensity = calcLighting(lights, point, (point - s.center).normalize());
+            fillColor = s.color * diffuseIntensity;
             filled = true;
         }
     }
@@ -78,6 +100,9 @@ void render()
     scene.push_back(Sphere(Vec3f(1.5, -0.5, -18), 3, babyBlue));
     scene.push_back(Sphere(Vec3f(7, 5, -18), 4, babyPink));
 
+    std::vector<Light> lights;
+	lights.emplace_back(Vec3f(-20, 20, 20), 1.5f);
+
     for (size_t j = 0; j < height; j++)
     {
         for (size_t i = 0; i < width; i++)
@@ -85,7 +110,7 @@ void render()
             float x = (2 * (i + 0.5) / (float)width - 1) * tan(fov / 2.) * width / (float)height;
             float y = -(2 * (j + 0.5) / (float)height - 1) * tan(fov / 2.);
             Vec3f dir = Vec3f(x, y, -1).normalize();
-            framebuffer[i + j * width] = cast_ray(Vec3f(0, 0, 0), dir, scene); // 카메라는 0,0,0에 위치
+            framebuffer[i + j * width] = cast_ray(Vec3f(0, 0, 0), dir, scene, lights); // Place camera at 0,0,0
         }
     }
 
