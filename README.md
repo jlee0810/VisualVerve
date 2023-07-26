@@ -7,3 +7,6 @@ Added sphere intersection algorithm and print out the 2D scene accordingly
 
 Added multiple spheres with two colors and different radius. Have z buffer to consider depth of sphere
 ![step2](https://github.com/jlee0810/VisualVerve/assets/96732758/fd412920-d0dd-4d87-8750-a3846d2b42dd)
+
+Added lighting
+![step3](https://github.com/jlee0810/VisualVerve/assets/96732758/999d6d61-f611-4873-a37b-40cc95e348ee)
