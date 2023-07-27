@@ -86,10 +86,20 @@ Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &s
     Material mat;
     if (!sceneIntersect(orig, dir, scene, point, N, mat))
         return Vec3f(0.3, 0.3, 0.3);
+
     float diffuseIntensity = 0, specular_light_intensity = 0;
     for (const Light &l : lights)
     {
-        Vec3f lightDir = (l.position - point).normalize();             // Vector from light source to point
+        Vec3f lightDir = (l.position - point).normalize(); // Vector from light source to point
+        float listDist = (l.position - point).norm();      // Distance from light source to point
+
+        Vec3f shadow_orig = lightDir * N < 0 ? point - N * 1e-3 : point + N * 1e-3; // Point + N * 1e-3 is to avoid shadow acne
+        Vec3f shadow_pt, shadow_N;
+
+        Material tmpmaterial;
+        if (sceneIntersect(shadow_orig, lightDir, scene, shadow_pt, shadow_N, tmpmaterial) && (shadow_pt - shadow_orig).norm() < listDist)
+            continue; // do not get diffuse or specular intensity
+
         diffuseIntensity += l.intensity * std::max(0.f, lightDir * N); // Diffuse intensity is the dot product of the light direction and the normal
         specular_light_intensity += powf(std::max(0.f, reflect(lightDir, N) * dir), mat.specular_exponent) * l.intensity;
     }
