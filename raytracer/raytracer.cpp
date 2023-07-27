@@ -5,14 +5,24 @@
 #include <vector>
 #include "geometry.h"
 
+struct Material
+{
+    Material(const Vec2f &a, const Vec3f &color, const float &spec) : albedo(a), diffuse_color(color), specular_exponent(spec) {}
+    Material() : albedo(1, 0), diffuse_color(), specular_exponent() {}
+
+    Vec2f albedo; // fraction of light that is diffusely reflected by a body
+    Vec3f diffuse_color;
+    float specular_exponent;
+};
+
 struct Sphere
 {
     // Define the center and radius of the sphere
     Vec3f center;
     float radius;
-    Vec3f color;
+    Material material;
 
-    Sphere(const Vec3f &c, const float &r, const Vec3f &color) : center(c), radius(r), color(color) {}
+    Sphere(const Vec3f &c, const float &r, const Material &mat) : center{c}, radius{r}, material{mat} {}
 
     // intersecting algorithm: http://www.lighthouse3d.com/tutorials/maths/ray-sphere-intersection/
     bool ray_intersect(const Vec3f &p, const Vec3f &dir, float &closestDist) const
@@ -49,39 +59,42 @@ struct Light
     float intensity;
 };
 
-float calcLighting(const std::vector<Light> &lights, const Vec3f &point, const Vec3f &normal)
+Vec3f reflect(const Vec3f &light, const Vec3f &normal)
 {
-    float diffuseIntensity = 0;
-    for (const Light &l : lights)
+    return light - normal * 2.f * (light * normal);
+}
+
+bool sceneIntersect(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene, Vec3f &hit, Vec3f &N, Material &mat)
+{
+    float sphereDist = std::numeric_limits<float>::max();
+    Vec3f fillColor{};
+    for (const Sphere &s : scene)
     {
-        Vec3f lightDir = (l.position - point).normalize();                  // Vector from light source to point
-        diffuseIntensity += l.intensity * std::max(0.f, lightDir * normal); // Diffuse intensity is the dot product of the light direction and the normal
-        // The intensity is 0 when the angle between the light direction and the normal is greater than 90 degrees ie backface
+        if (s.ray_intersect(orig, dir, sphereDist))
+        {
+            hit = orig + dir * sphereDist;
+            N = (hit - s.center).normalize();
+            mat = s.material;
+        }
     }
-    return diffuseIntensity; // Since the light doesn't have a color yet we just return the intensity
+    return sphereDist < 1000; // Ray is not infinite we set a limit to 1000 (== far plane is 1000)
 }
 
 Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene, const std::vector<Light> &lights = {})
 {
-    float sphere_dist = std::numeric_limits<float>::max();
-    Vec3f fillColor{};
-    bool filled = false;
-
-    for (const Sphere &s : scene)
+    Vec3f point, N;
+    Material mat;
+    if (!sceneIntersect(orig, dir, scene, point, N, mat))
+        return Vec3f(0.3, 0.3, 0.3);
+    float diffuseIntensity = 0, specular_light_intensity = 0;
+    for (const Light &l : lights)
     {
-        if (s.ray_intersect(orig, dir, sphere_dist))
-        {
-            Vec3f point = orig + dir * sphere_dist;
-            float diffuseIntensity = calcLighting(lights, point, (point - s.center).normalize());
-            fillColor = s.color * diffuseIntensity;
-            filled = true;
-        }
+        Vec3f lightDir = (l.position - point).normalize();             // Vector from light source to point
+        diffuseIntensity += l.intensity * std::max(0.f, lightDir * N); // Diffuse intensity is the dot product of the light direction and the normal
+        specular_light_intensity += powf(std::max(0.f, reflect(lightDir, N) * dir), mat.specular_exponent) * l.intensity;
     }
 
-    if (!filled)
-        return Vec3f(0.3, 0.3, 0.3);
-    else
-        return fillColor;
+    return mat.diffuse_color * diffuseIntensity * mat.albedo[0] + Vec3f(1., 1., 1.) * specular_light_intensity * mat.albedo[1];
 }
 
 void render()
@@ -91,8 +104,8 @@ void render()
     std::vector<Vec3f> framebuffer(width * height);
     const int fov = M_PI / 2.;
 
-    Vec3f babyBlue = {0.537, 0.812, 0.941};
-    Vec3f babyPink = {0.973, 0.537, 0.537};
+    Material babyBlue = {Vec2f(0.6, 0.3), Vec3f(0.537, 0.812, 0.941), 50};
+    Material babyPink = {Vec2f(0.6, 0.3), Vec3f(0.941, 0.537, 0.812), 5};
 
     std::vector<Sphere> scene;
     scene.push_back(Sphere(Vec3f(-3, 0, -16), 2, babyBlue));
@@ -101,7 +114,7 @@ void render()
     scene.push_back(Sphere(Vec3f(7, 5, -18), 4, babyPink));
 
     std::vector<Light> lights;
-	lights.emplace_back(Vec3f(-20, 20, 20), 1.5f);
+    lights.emplace_back(Vec3f(-20, 20, 20), 1.5f);
 
     for (size_t j = 0; j < height; j++)
     {
