@@ -7,10 +7,10 @@
 
 struct Material
 {
-    Material(const Vec2f &a, const Vec3f &color, const float &spec) : albedo(a), diffuse_color(color), specular_exponent(spec) {}
-    Material() : albedo(1, 0), diffuse_color(), specular_exponent() {}
+    Material(const Vec3f &a, const Vec3f &color, const float &spec) : albedo(a), diffuse_color(color), specular_exponent(spec) {}
+    Material() : albedo(1, 0, 0), diffuse_color(), specular_exponent() {}
 
-    Vec2f albedo; // fraction of light that is diffusely reflected by a body
+    Vec3f albedo; // fraction of light that is diffusely reflected by a body
     Vec3f diffuse_color;
     float specular_exponent;
 };
@@ -80,12 +80,18 @@ bool sceneIntersect(const Vec3f &orig, const Vec3f &dir, const std::vector<Spher
     return sphereDist < 1000; // Ray is not infinite we set a limit to 1000 (== far plane is 1000)
 }
 
-Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene, const std::vector<Light> &lights = {})
+Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &scene, const std::vector<Light> &lights = {}, size_t depth = 0)
 {
     Vec3f point, N;
     Material mat;
-    if (!sceneIntersect(orig, dir, scene, point, N, mat))
-        return Vec3f(0.3, 0.3, 0.3);
+
+    // depth here is the max number of times the ray can bounce off an object
+    if (depth > 4 || !sceneIntersect(orig, dir, scene, point, N, mat))
+        return Vec3f(0.3, 0.3, 0.3); // background color
+
+    Vec3f reflect_dir = reflect(dir, N).normalize();
+    Vec3f reflect_orig = reflect_dir * N < 0 ? point - N * 1e-3 : point + N * 1e-3;
+    Vec3f reflect_color = cast_ray(reflect_orig, reflect_dir, scene, lights, depth + 1);
 
     float diffuseIntensity = 0, specular_light_intensity = 0;
     for (const Light &l : lights)
@@ -104,7 +110,7 @@ Vec3f cast_ray(const Vec3f &orig, const Vec3f &dir, const std::vector<Sphere> &s
         specular_light_intensity += powf(std::max(0.f, reflect(lightDir, N) * dir), mat.specular_exponent) * l.intensity;
     }
 
-    return mat.diffuse_color * diffuseIntensity * mat.albedo[0] + Vec3f(1., 1., 1.) * specular_light_intensity * mat.albedo[1];
+    return mat.diffuse_color * diffuseIntensity * mat.albedo[0] + Vec3f(1., 1., 1.) * specular_light_intensity * mat.albedo[1] + reflect_color * mat.albedo[2];
 }
 
 void render()
@@ -114,14 +120,15 @@ void render()
     std::vector<Vec3f> framebuffer(width * height);
     const int fov = M_PI / 2.;
 
-    Material babyBlue = {Vec2f(0.6, 0.3), Vec3f(0.537, 0.812, 0.941), 50};
-    Material babyPink = {Vec2f(0.6, 0.3), Vec3f(0.941, 0.537, 0.812), 5};
+    Material babyBlue = {Vec3f(0.6, 0.3, 0.1), Vec3f(0.537, 0.812, 0.941), 50};
+    Material babyPink = {Vec3f(0.6, 0.3, 0.0), Vec3f(0.941, 0.537, 0.812), 5};
+    Material mirror = {Vec3f(0.0, 10.0, 0.8), Vec3f(1.0, 1.0, 1.0), 1425};
 
     std::vector<Sphere> scene;
-    scene.push_back(Sphere(Vec3f(-3, 0, -16), 2, babyBlue));
-    scene.push_back(Sphere(Vec3f(-1.0, -1.5, -12), 2, babyPink));
+    scene.push_back(Sphere(Vec3f(-3, 0, -16), 2, babyPink));
+    scene.push_back(Sphere(Vec3f(-1.0, -1.5, -12), 2, mirror));
     scene.push_back(Sphere(Vec3f(1.5, -0.5, -18), 3, babyBlue));
-    scene.push_back(Sphere(Vec3f(7, 5, -18), 4, babyPink));
+    scene.push_back(Sphere(Vec3f(7, 5, -18), 4, mirror));
 
     std::vector<Light> lights;
     lights.emplace_back(Vec3f(-20, 20, 20), 1.5f);
