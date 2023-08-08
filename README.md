@@ -1,7 +1,7 @@
 # VisualVerve
 A Showcase of Graphics Artworks
 
-Ray Tracing:
+## Ray Tracing:
 
 Progress:
 Added sphere intersection algorithm and print out the 2D scene accordingly
@@ -24,3 +24,6 @@ Add a mirror ball (Look carefully at how changing the reflection depth value cha
 
 Added refracting ball
 ![refract](https://github.com/jlee0810/VisualVerve/assets/96732758/bb675fef-857f-4ba6-989b-5bc12d3dbdfc)
+
+## Ray Marching
+![explosion](https://github.com/jlee0810/VisualVerve/assets/96732758/9ebf2339-4b3d-4d32-a9e9-b7f17b0c1327)
