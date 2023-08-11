@@ -201,6 +201,30 @@ raycaster.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/raycaster.cpp.s
 .PHONY : raycaster.cpp.s
 
+sprite.o: sprite.cpp.o
+.PHONY : sprite.o
+
+# target to build an object file
+sprite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/sprite.cpp.o
+.PHONY : sprite.cpp.o
+
+sprite.i: sprite.cpp.i
+.PHONY : sprite.i
+
+# target to preprocess a source file
+sprite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/sprite.cpp.i
+.PHONY : sprite.cpp.i
+
+sprite.s: sprite.cpp.s
+.PHONY : sprite.s
+
+# target to generate assembly for a file
+sprite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/sprite.cpp.s
+.PHONY : sprite.cpp.s
+
 textures.o: textures.cpp.o
 .PHONY : textures.o
 
@@ -267,6 +291,9 @@ help:
 	@echo "... raycaster.o"
 	@echo "... raycaster.i"
 	@echo "... raycaster.s"
+	@echo "... sprite.o"
+	@echo "... sprite.i"
+	@echo "... sprite.s"
 	@echo "... textures.o"
 	@echo "... textures.i"
 	@echo "... textures.s"

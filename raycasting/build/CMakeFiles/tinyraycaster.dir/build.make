@@ -111,10 +111,24 @@ CMakeFiles/tinyraycaster.dir/raycaster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/raycaster.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/raycaster.cpp -o CMakeFiles/tinyraycaster.dir/raycaster.cpp.s
 
+CMakeFiles/tinyraycaster.dir/sprite.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
+CMakeFiles/tinyraycaster.dir/sprite.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/sprite.cpp
+CMakeFiles/tinyraycaster.dir/sprite.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tinyraycaster.dir/sprite.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/sprite.cpp.o -MF CMakeFiles/tinyraycaster.dir/sprite.cpp.o.d -o CMakeFiles/tinyraycaster.dir/sprite.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/sprite.cpp
+
+CMakeFiles/tinyraycaster.dir/sprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tinyraycaster.dir/sprite.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/sprite.cpp > CMakeFiles/tinyraycaster.dir/sprite.cpp.i
+
+CMakeFiles/tinyraycaster.dir/sprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/sprite.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/sprite.cpp -o CMakeFiles/tinyraycaster.dir/sprite.cpp.s
+
 CMakeFiles/tinyraycaster.dir/textures.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
 CMakeFiles/tinyraycaster.dir/textures.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp
 CMakeFiles/tinyraycaster.dir/textures.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tinyraycaster.dir/textures.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tinyraycaster.dir/textures.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/textures.cpp.o -MF CMakeFiles/tinyraycaster.dir/textures.cpp.o.d -o CMakeFiles/tinyraycaster.dir/textures.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp
 
 CMakeFiles/tinyraycaster.dir/textures.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/tinyraycaster.dir/textures.cpp.s: cmake_force
 CMakeFiles/tinyraycaster.dir/utils.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
 CMakeFiles/tinyraycaster.dir/utils.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp
 CMakeFiles/tinyraycaster.dir/utils.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tinyraycaster.dir/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/tinyraycaster.dir/utils.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/utils.cpp.o -MF CMakeFiles/tinyraycaster.dir/utils.cpp.o.d -o CMakeFiles/tinyraycaster.dir/utils.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp
 
 CMakeFiles/tinyraycaster.dir/utils.cpp.i: cmake_force
@@ -144,6 +158,7 @@ tinyraycaster_OBJECTS = \
 "CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o" \
 "CMakeFiles/tinyraycaster.dir/map.cpp.o" \
 "CMakeFiles/tinyraycaster.dir/raycaster.cpp.o" \
+"CMakeFiles/tinyraycaster.dir/sprite.cpp.o" \
 "CMakeFiles/tinyraycaster.dir/textures.cpp.o" \
 "CMakeFiles/tinyraycaster.dir/utils.cpp.o"
 
@@ -153,11 +168,12 @@ tinyraycaster_EXTERNAL_OBJECTS =
 tinyraycaster: CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/map.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/raycaster.cpp.o
+tinyraycaster: CMakeFiles/tinyraycaster.dir/sprite.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/textures.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/utils.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/build.make
 tinyraycaster: CMakeFiles/tinyraycaster.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tinyraycaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable tinyraycaster"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tinyraycaster.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

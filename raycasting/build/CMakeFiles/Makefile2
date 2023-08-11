@@ -81,12 +81,12 @@ clean: CMakeFiles/tinyraycaster.dir/clean
 CMakeFiles/tinyraycaster.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target tinyraycaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target tinyraycaster"
 .PHONY : CMakeFiles/tinyraycaster.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tinyraycaster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tinyraycaster.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles 0
 .PHONY : CMakeFiles/tinyraycaster.dir/rule

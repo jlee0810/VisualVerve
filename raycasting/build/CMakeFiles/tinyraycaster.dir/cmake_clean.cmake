@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tinyraycaster.dir/map.cpp.o.d"
   "CMakeFiles/tinyraycaster.dir/raycaster.cpp.o"
   "CMakeFiles/tinyraycaster.dir/raycaster.cpp.o.d"
+  "CMakeFiles/tinyraycaster.dir/sprite.cpp.o"
+  "CMakeFiles/tinyraycaster.dir/sprite.cpp.o.d"
   "CMakeFiles/tinyraycaster.dir/textures.cpp.o"
   "CMakeFiles/tinyraycaster.dir/textures.cpp.o.d"
   "CMakeFiles/tinyraycaster.dir/utils.cpp.o"

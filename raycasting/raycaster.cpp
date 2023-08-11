@@ -6,6 +6,7 @@
 #include <cassert>
 #include <sstream>
 #include <iomanip>
+#include <algorithm>
 
 #include "map.h"
 #include "utils.h"
@@ -35,7 +36,7 @@ void map_sprite(Sprite &sprite, FrameBuffer &fb, Map &map)
     fb.draw_rectangle(sprite.x * map_cell_w - 3, sprite.y * map_cell_h - 3, 6, 6, pack_color(255, 0, 0));
 }
 
-void draw_sprite(Sprite &sprite, FrameBuffer &fb, Player &player, Texture &tex_sprites)
+void draw_sprite(Sprite &sprite, std::vector<float> &depth_buffer, FrameBuffer &fb, Player &player, Texture &tex_sprites)
 {
     float sprite_dir = atan2(sprite.y - player.y, sprite.x - player.x); // angle between sprite and player
 
@@ -45,20 +46,26 @@ void draw_sprite(Sprite &sprite, FrameBuffer &fb, Player &player, Texture &tex_s
     while (sprite_dir - player.angle < -M_PI)
         sprite_dir += 2 * M_PI;
 
-    float sprite_dist = std::sqrt(pow(player.x - sprite.x, 2) + pow(player.y - sprite.y, 2));                            // distance from the player to the sprite
-    size_t sprite_screen_size = std::min(1000, static_cast<int>(fb.h / sprite_dist));                                    // screen sprite size
+    size_t sprite_screen_size = std::min(1000, static_cast<int>(fb.h / sprite.player_dist));
     int h_offset = (sprite_dir - player.angle) / player.player_fov * (fb.w / 2) + (fb.w / 2) / 2 - tex_sprites.size / 2; // do not forget the 3D view takes only a half of the framebuffer
     int v_offset = fb.h / 2 - sprite_screen_size / 2;
 
     for (size_t i = 0; i < sprite_screen_size; i++)
     {
-        if (h_offset + i < 0 || h_offset + i >= fb.w / 2)
+        if (h_offset + int(i) < 0 || h_offset + i >= fb.w / 2)
             continue;
+        if (depth_buffer[h_offset + i] < sprite.player_dist)
+            continue; // if we have already drawn a sprite at a closer distance, there is no need to draw this one (painters algorithm)
+
         for (size_t j = 0; j < sprite_screen_size; j++)
         {
-            if (v_offset + j < 0 || v_offset + j >= fb.h)
+            if (v_offset + int(j) < 0 || v_offset + j >= fb.h)
                 continue;
-            fb.set_pixel(fb.w / 2 + h_offset + i, v_offset + j, pack_color(0, 0, 0));
+            uint32_t color = tex_sprites.get(i * tex_sprites.size / sprite_screen_size, j * tex_sprites.size / sprite_screen_size, sprite.tex_id);
+            uint8_t r, g, b, a;
+            unpack_color(color, r, g, b, a);
+            if (a > 128)
+                fb.set_pixel(fb.w / 2 + h_offset + i, v_offset + j, color);
         }
     }
 }
@@ -83,6 +90,8 @@ void render(FrameBuffer &fb, Map &map, Player &player, std::vector<Sprite> &spri
         }
     }
 
+    std::vector<float> depth_buffer(fb.w / 2, 1e3); // buffer to keep track of the Z distance to the walls
+
     for (size_t i = 0; i < fb.w / 2; i++)
     { // draw the visibility cone AND the "3D" view
         float angle = player.angle - player.player_fov / 2 + player.player_fov * i / float(fb.w / 2);
@@ -99,6 +108,7 @@ void render(FrameBuffer &fb, Map &map, Player &player, std::vector<Sprite> &spri
             assert(texid < tex_walls.count);
 
             float dist = t * cos(angle - player.angle); // remove fish eye
+            depth_buffer[i] = dist;
             size_t column_height = fb.h / dist;
 
             int x_texcoord = wall_x_texcoord(x, y, tex_walls);
@@ -116,9 +126,15 @@ void render(FrameBuffer &fb, Map &map, Player &player, std::vector<Sprite> &spri
         } // ray marching loop
     }     // field of view ray sweeping
     for (size_t i = 0; i < sprites.size(); i++)
+    { // update the distances from the player to all sprites and sort them
+        sprites[i].player_dist = std::sqrt(pow(player.x - sprites[i].x, 2) + pow(player.y - sprites[i].y, 2));
+    }
+    std::sort(sprites.begin(), sprites.end()); // sort it from farthest to closest
+
+    for (size_t i = 0; i < sprites.size(); i++)
     {
         map_sprite(sprites[i], fb, map);
-        draw_sprite(sprites[i], fb, player, tex_monst);
+        draw_sprite(sprites[i], depth_buffer, fb, player, tex_monst);
     }
 }
 
@@ -141,9 +157,10 @@ int main()
     }
 
     std::vector<Sprite> sprites;
-    sprites.push_back({1.834, 8.765, 0}); // add some random sprites to the map
-    sprites.push_back({2.764, 7.345, 1}); // they have random positions and directions
-    sprites.push_back({2.000, 2.000, 1}); // they have random positions and directions
+    sprites.push_back({3.523, 3.812, 2, 0}); // they have random positions and directions
+    sprites.push_back({1.834, 8.765, 0, 0}); // add some random sprites to the map
+    sprites.push_back({2.764, 7.345, 1, 0}); // they have random positions and directions
+    sprites.push_back({2.000, 2.000, 1, 0}); // they have random positions and directions
 
     render(fb, map, player, sprites, tex_walls, tex_monst);
     drop_ppm_image("./out.ppm", fb.img, fb.w, fb.h);
