@@ -129,6 +129,54 @@ tinyraycaster/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/build
 .PHONY : tinyraycaster/fast
 
+framebuffer.o: framebuffer.cpp.o
+.PHONY : framebuffer.o
+
+# target to build an object file
+framebuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o
+.PHONY : framebuffer.cpp.o
+
+framebuffer.i: framebuffer.cpp.i
+.PHONY : framebuffer.i
+
+# target to preprocess a source file
+framebuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/framebuffer.cpp.i
+.PHONY : framebuffer.cpp.i
+
+framebuffer.s: framebuffer.cpp.s
+.PHONY : framebuffer.s
+
+# target to generate assembly for a file
+framebuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/framebuffer.cpp.s
+.PHONY : framebuffer.cpp.s
+
+map.o: map.cpp.o
+.PHONY : map.o
+
+# target to build an object file
+map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/map.cpp.o
+.PHONY : map.cpp.o
+
+map.i: map.cpp.i
+.PHONY : map.i
+
+# target to preprocess a source file
+map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/map.cpp.i
+.PHONY : map.cpp.i
+
+map.s: map.cpp.s
+.PHONY : map.s
+
+# target to generate assembly for a file
+map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/map.cpp.s
+.PHONY : map.cpp.s
+
 raycaster.o: raycaster.cpp.o
 .PHONY : raycaster.o
 
@@ -153,6 +201,54 @@ raycaster.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/raycaster.cpp.s
 .PHONY : raycaster.cpp.s
 
+textures.o: textures.cpp.o
+.PHONY : textures.o
+
+# target to build an object file
+textures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/textures.cpp.o
+.PHONY : textures.cpp.o
+
+textures.i: textures.cpp.i
+.PHONY : textures.i
+
+# target to preprocess a source file
+textures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/textures.cpp.i
+.PHONY : textures.cpp.i
+
+textures.s: textures.cpp.s
+.PHONY : textures.s
+
+# target to generate assembly for a file
+textures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/textures.cpp.s
+.PHONY : textures.cpp.s
+
+utils.o: utils.cpp.o
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tinyraycaster.dir/build.make CMakeFiles/tinyraycaster.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... tinyraycaster"
+	@echo "... framebuffer.o"
+	@echo "... framebuffer.i"
+	@echo "... framebuffer.s"
+	@echo "... map.o"
+	@echo "... map.i"
+	@echo "... map.s"
 	@echo "... raycaster.o"
 	@echo "... raycaster.i"
 	@echo "... raycaster.s"
+	@echo "... textures.o"
+	@echo "... textures.i"
+	@echo "... textures.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

@@ -69,10 +69,38 @@ include CMakeFiles/tinyraycaster.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tinyraycaster.dir/flags.make
 
+CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
+CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/framebuffer.cpp
+CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o -MF CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o.d -o CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/framebuffer.cpp
+
+CMakeFiles/tinyraycaster.dir/framebuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tinyraycaster.dir/framebuffer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/framebuffer.cpp > CMakeFiles/tinyraycaster.dir/framebuffer.cpp.i
+
+CMakeFiles/tinyraycaster.dir/framebuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/framebuffer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/framebuffer.cpp -o CMakeFiles/tinyraycaster.dir/framebuffer.cpp.s
+
+CMakeFiles/tinyraycaster.dir/map.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
+CMakeFiles/tinyraycaster.dir/map.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/map.cpp
+CMakeFiles/tinyraycaster.dir/map.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tinyraycaster.dir/map.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/map.cpp.o -MF CMakeFiles/tinyraycaster.dir/map.cpp.o.d -o CMakeFiles/tinyraycaster.dir/map.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/map.cpp
+
+CMakeFiles/tinyraycaster.dir/map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tinyraycaster.dir/map.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/map.cpp > CMakeFiles/tinyraycaster.dir/map.cpp.i
+
+CMakeFiles/tinyraycaster.dir/map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/map.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/map.cpp -o CMakeFiles/tinyraycaster.dir/map.cpp.s
+
 CMakeFiles/tinyraycaster.dir/raycaster.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
 CMakeFiles/tinyraycaster.dir/raycaster.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/raycaster.cpp
 CMakeFiles/tinyraycaster.dir/raycaster.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tinyraycaster.dir/raycaster.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tinyraycaster.dir/raycaster.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/raycaster.cpp.o -MF CMakeFiles/tinyraycaster.dir/raycaster.cpp.o.d -o CMakeFiles/tinyraycaster.dir/raycaster.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/raycaster.cpp
 
 CMakeFiles/tinyraycaster.dir/raycaster.cpp.i: cmake_force
@@ -83,17 +111,53 @@ CMakeFiles/tinyraycaster.dir/raycaster.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/raycaster.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/raycaster.cpp -o CMakeFiles/tinyraycaster.dir/raycaster.cpp.s
 
+CMakeFiles/tinyraycaster.dir/textures.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
+CMakeFiles/tinyraycaster.dir/textures.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp
+CMakeFiles/tinyraycaster.dir/textures.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tinyraycaster.dir/textures.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/textures.cpp.o -MF CMakeFiles/tinyraycaster.dir/textures.cpp.o.d -o CMakeFiles/tinyraycaster.dir/textures.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp
+
+CMakeFiles/tinyraycaster.dir/textures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tinyraycaster.dir/textures.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp > CMakeFiles/tinyraycaster.dir/textures.cpp.i
+
+CMakeFiles/tinyraycaster.dir/textures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/textures.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/textures.cpp -o CMakeFiles/tinyraycaster.dir/textures.cpp.s
+
+CMakeFiles/tinyraycaster.dir/utils.cpp.o: CMakeFiles/tinyraycaster.dir/flags.make
+CMakeFiles/tinyraycaster.dir/utils.cpp.o: /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp
+CMakeFiles/tinyraycaster.dir/utils.cpp.o: CMakeFiles/tinyraycaster.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/tinyraycaster.dir/utils.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tinyraycaster.dir/utils.cpp.o -MF CMakeFiles/tinyraycaster.dir/utils.cpp.o.d -o CMakeFiles/tinyraycaster.dir/utils.cpp.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp
+
+CMakeFiles/tinyraycaster.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tinyraycaster.dir/utils.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp > CMakeFiles/tinyraycaster.dir/utils.cpp.i
+
+CMakeFiles/tinyraycaster.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tinyraycaster.dir/utils.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/utils.cpp -o CMakeFiles/tinyraycaster.dir/utils.cpp.s
+
 # Object files for target tinyraycaster
 tinyraycaster_OBJECTS = \
-"CMakeFiles/tinyraycaster.dir/raycaster.cpp.o"
+"CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o" \
+"CMakeFiles/tinyraycaster.dir/map.cpp.o" \
+"CMakeFiles/tinyraycaster.dir/raycaster.cpp.o" \
+"CMakeFiles/tinyraycaster.dir/textures.cpp.o" \
+"CMakeFiles/tinyraycaster.dir/utils.cpp.o"
 
 # External object files for target tinyraycaster
 tinyraycaster_EXTERNAL_OBJECTS =
 
+tinyraycaster: CMakeFiles/tinyraycaster.dir/framebuffer.cpp.o
+tinyraycaster: CMakeFiles/tinyraycaster.dir/map.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/raycaster.cpp.o
+tinyraycaster: CMakeFiles/tinyraycaster.dir/textures.cpp.o
+tinyraycaster: CMakeFiles/tinyraycaster.dir/utils.cpp.o
 tinyraycaster: CMakeFiles/tinyraycaster.dir/build.make
 tinyraycaster: CMakeFiles/tinyraycaster.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable tinyraycaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable tinyraycaster"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tinyraycaster.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

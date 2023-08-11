@@ -732,3 +732,510 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-8bYDno"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-8bYDno"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-8bYDno'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_00db4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_00db4.dir/build.make CMakeFiles/cmTC_00db4.dir/build
+        Building CXX object CMakeFiles/cmTC_00db4.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wall -MD -MT CMakeFiles/cmTC_00db4.dir/src.cxx.o -MF CMakeFiles/cmTC_00db4.dir/src.cxx.o.d -o CMakeFiles/cmTC_00db4.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-8bYDno/src.cxx
+        Linking CXX executable cmTC_00db4
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00db4.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_00db4.dir/src.cxx.o -o cmTC_00db4 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-j6ma8f"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-j6ma8f"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-j6ma8f'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6dd2e/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6dd2e.dir/build.make CMakeFiles/cmTC_6dd2e.dir/build
+        Building CXX object CMakeFiles/cmTC_6dd2e.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wextra -MD -MT CMakeFiles/cmTC_6dd2e.dir/src.cxx.o -MF CMakeFiles/cmTC_6dd2e.dir/src.cxx.o.d -o CMakeFiles/cmTC_6dd2e.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-j6ma8f/src.cxx
+        Linking CXX executable cmTC_6dd2e
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6dd2e.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6dd2e.dir/src.cxx.o -o cmTC_6dd2e 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-kEVGh8"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-kEVGh8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-kEVGh8'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0ca28/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_0ca28.dir/build.make CMakeFiles/cmTC_0ca28.dir/build
+        Building CXX object CMakeFiles/cmTC_0ca28.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -pedantic -MD -MT CMakeFiles/cmTC_0ca28.dir/src.cxx.o -MF CMakeFiles/cmTC_0ca28.dir/src.cxx.o.d -o CMakeFiles/cmTC_0ca28.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-kEVGh8/src.cxx
+        Linking CXX executable cmTC_0ca28
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ca28.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0ca28.dir/src.cxx.o -o cmTC_0ca28 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3ATOHZ"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3ATOHZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3ATOHZ'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88be2/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_88be2.dir/build.make CMakeFiles/cmTC_88be2.dir/build
+        Building CXX object CMakeFiles/cmTC_88be2.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -std=c++11 -MD -MT CMakeFiles/cmTC_88be2.dir/src.cxx.o -MF CMakeFiles/cmTC_88be2.dir/src.cxx.o.d -o CMakeFiles/cmTC_88be2.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3ATOHZ/src.cxx
+        Linking CXX executable cmTC_88be2
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88be2.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_88be2.dir/src.cxx.o -o cmTC_88be2 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-Yo3AtG"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-Yo3AtG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -std=c++11"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-Yo3AtG'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e3d4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6e3d4.dir/build.make CMakeFiles/cmTC_6e3d4.dir/build
+        Building CXX object CMakeFiles/cmTC_6e3d4.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -O3 -MD -MT CMakeFiles/cmTC_6e3d4.dir/src.cxx.o -MF CMakeFiles/cmTC_6e3d4.dir/src.cxx.o.d -o CMakeFiles/cmTC_6e3d4.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-Yo3AtG/src.cxx
+        Linking CXX executable cmTC_6e3d4
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e3d4.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6e3d4.dir/src.cxx.o -o cmTC_6e3d4 
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ucggZR"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ucggZR"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ucggZR'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78e28/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_78e28.dir/build.make CMakeFiles/cmTC_78e28.dir/build
+        Building CXX object CMakeFiles/cmTC_78e28.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wall -MD -MT CMakeFiles/cmTC_78e28.dir/src.cxx.o -MF CMakeFiles/cmTC_78e28.dir/src.cxx.o.d -o CMakeFiles/cmTC_78e28.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ucggZR/src.cxx
+        Linking CXX executable cmTC_78e28
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78e28.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_78e28.dir/src.cxx.o -o cmTC_78e28 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-0jYeEx"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-0jYeEx"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-0jYeEx'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a63d4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_a63d4.dir/build.make CMakeFiles/cmTC_a63d4.dir/build
+        Building CXX object CMakeFiles/cmTC_a63d4.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wextra -MD -MT CMakeFiles/cmTC_a63d4.dir/src.cxx.o -MF CMakeFiles/cmTC_a63d4.dir/src.cxx.o.d -o CMakeFiles/cmTC_a63d4.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-0jYeEx/src.cxx
+        Linking CXX executable cmTC_a63d4
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a63d4.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a63d4.dir/src.cxx.o -o cmTC_a63d4 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ZF127L"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ZF127L"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ZF127L'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_beca4/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_beca4.dir/build.make CMakeFiles/cmTC_beca4.dir/build
+        Building CXX object CMakeFiles/cmTC_beca4.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -pedantic -MD -MT CMakeFiles/cmTC_beca4.dir/src.cxx.o -MF CMakeFiles/cmTC_beca4.dir/src.cxx.o.d -o CMakeFiles/cmTC_beca4.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-ZF127L/src.cxx
+        Linking CXX executable cmTC_beca4
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_beca4.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_beca4.dir/src.cxx.o -o cmTC_beca4 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-WiPXUb"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-WiPXUb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-WiPXUb'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_31cc8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_31cc8.dir/build.make CMakeFiles/cmTC_31cc8.dir/build
+        Building CXX object CMakeFiles/cmTC_31cc8.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -std=c++11 -MD -MT CMakeFiles/cmTC_31cc8.dir/src.cxx.o -MF CMakeFiles/cmTC_31cc8.dir/src.cxx.o.d -o CMakeFiles/cmTC_31cc8.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-WiPXUb/src.cxx
+        Linking CXX executable cmTC_31cc8
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31cc8.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_31cc8.dir/src.cxx.o -o cmTC_31cc8 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-uPAWih"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-uPAWih"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -std=c++11"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-uPAWih'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_413bd/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_413bd.dir/build.make CMakeFiles/cmTC_413bd.dir/build
+        Building CXX object CMakeFiles/cmTC_413bd.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -O3 -MD -MT CMakeFiles/cmTC_413bd.dir/src.cxx.o -MF CMakeFiles/cmTC_413bd.dir/src.cxx.o.d -o CMakeFiles/cmTC_413bd.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-uPAWih/src.cxx
+        Linking CXX executable cmTC_413bd
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_413bd.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_413bd.dir/src.cxx.o -o cmTC_413bd 
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:18 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3XgBW6"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3XgBW6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3XgBW6'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_38de3/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_38de3.dir/build.make CMakeFiles/cmTC_38de3.dir/build
+        Building CXX object CMakeFiles/cmTC_38de3.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wall -MD -MT CMakeFiles/cmTC_38de3.dir/src.cxx.o -MF CMakeFiles/cmTC_38de3.dir/src.cxx.o.d -o CMakeFiles/cmTC_38de3.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-3XgBW6/src.cxx
+        Linking CXX executable cmTC_38de3
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38de3.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_38de3.dir/src.cxx.o -o cmTC_38de3 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:19 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-IIRTgi"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-IIRTgi"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-IIRTgi'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_31427/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_31427.dir/build.make CMakeFiles/cmTC_31427.dir/build
+        Building CXX object CMakeFiles/cmTC_31427.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -Wextra -MD -MT CMakeFiles/cmTC_31427.dir/src.cxx.o -MF CMakeFiles/cmTC_31427.dir/src.cxx.o.d -o CMakeFiles/cmTC_31427.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-IIRTgi/src.cxx
+        Linking CXX executable cmTC_31427
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31427.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_31427.dir/src.cxx.o -o cmTC_31427 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:20 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-p1froL"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-p1froL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-p1froL'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fbfd2/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_fbfd2.dir/build.make CMakeFiles/cmTC_fbfd2.dir/build
+        Building CXX object CMakeFiles/cmTC_fbfd2.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -pedantic -MD -MT CMakeFiles/cmTC_fbfd2.dir/src.cxx.o -MF CMakeFiles/cmTC_fbfd2.dir/src.cxx.o.d -o CMakeFiles/cmTC_fbfd2.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-p1froL/src.cxx
+        Linking CXX executable cmTC_fbfd2
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbfd2.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fbfd2.dir/src.cxx.o -o cmTC_fbfd2 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:21 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-xZeuFn"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-xZeuFn"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-xZeuFn'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ec803/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ec803.dir/build.make CMakeFiles/cmTC_ec803.dir/build
+        Building CXX object CMakeFiles/cmTC_ec803.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -std=c++11 -MD -MT CMakeFiles/cmTC_ec803.dir/src.cxx.o -MF CMakeFiles/cmTC_ec803.dir/src.cxx.o.d -o CMakeFiles/cmTC_ec803.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-xZeuFn/src.cxx
+        Linking CXX executable cmTC_ec803
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec803.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ec803.dir/src.cxx.o -o cmTC_ec803 
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/opt/homebrew/Cellar/cmake/3.27.0/share/cmake/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:10 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:22 (enable_cxx_compiler_flag_if_supported)"
+    checks:
+      - "Performing Test flag_supported"
+    directories:
+      source: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-2unVZp"
+      binary: "/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-2unVZp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -Wall -Wextra -pedantic -std=c++11"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_OSX_SYSROOT: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "flag_supported"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-2unVZp'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f56df/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f56df.dir/build.make CMakeFiles/cmTC_f56df.dir/build
+        Building CXX object CMakeFiles/cmTC_f56df.dir/src.cxx.o
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -Dflag_supported  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0   -O3 -MD -MT CMakeFiles/cmTC_f56df.dir/src.cxx.o -MF CMakeFiles/cmTC_f56df.dir/src.cxx.o.d -o CMakeFiles/cmTC_f56df.dir/src.cxx.o -c /Users/joonwon_lee/Desktop/Code/visualverve/raycasting/build/CMakeFiles/CMakeScratch/TryCompile-2unVZp/src.cxx
+        Linking CXX executable cmTC_f56df
+        /opt/homebrew/Cellar/cmake/3.27.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f56df.dir/link.txt --verbose=1
+        /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -Wall -Wextra -pedantic -std=c++11  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f56df.dir/src.cxx.o -o cmTC_f56df 
+        
+      exitCode: 0
+...
